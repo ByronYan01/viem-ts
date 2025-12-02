@@ -52,12 +52,20 @@ console.log(account);
     client,
   });
 
+  // 方法一
   // const x = await client.readContract({
   //   abi,
   //   address: contractAddress as Hex,
   //   functionName: "x",
   // });
   // console.log(x);
+  // 方法二
+  // getStorageAt --- 读取合约指定插槽的存储
+  // console.log(await client.getStorageAt({
+  //   address: contractAddress as Hex,
+  //   slot: "0x0",
+  // }));
+  // 方法三
   console.log(await contract.read.x());
 
   // const changeTxHash = await client.writeContract({
