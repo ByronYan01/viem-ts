@@ -1,0 +1,26 @@
+{
+  "name": "veim-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npx solcjs --bin --abi --optimize --output-dir artifacts contracts/Fun.sol",
+    "event": "ts-node src/3-event.ts",
+    "contract": "ts-node src/2-contract.ts",
+    "account": "ts-node src/1-account.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "solc": "0.8.25",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "viem": "^2.40.3"
+  }
+}
